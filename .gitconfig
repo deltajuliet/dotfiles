@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Dan Jones
+	email = 1455270+deltajuliet@users.noreply.github.com
+[core]
+	excludesfile = /Users/deltajuliet/.gitignore_global
+[include]
+        path = /Users/deltajuliet/.gitconfig.aliases
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

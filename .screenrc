@@ -1,0 +1,10 @@
+backtick 0 30 30 sh -c 'screen -ls | grep --color=no -o "$PPID[^[:space:]]*"'
+bindkey "^[Od" prev  # change window with ctrl-left
+bindkey "^[Oc" next  # change window with ctrl-right
+caption string "%w"
+defscrollback 1024
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{= KW} %H [%`] %{= Kw}|%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw %=%C%a %Y-%M-%d"
+shell -${SHELL}
+startup_message off
