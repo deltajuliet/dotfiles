@@ -9,5 +9,8 @@ policygrep()
   pdfgrep -in  $1 /Users/dan.jones/Google\ Drive\ File\ Stream/My\ Drive/***Shared/Wiki/MX\ Security/Client-Partner\ Due\ Diligence\ \(under\ NDA\)/*.pdf
 }
 
-export GITLAB_API_PRIVATE_TOKEN=-8FrxFxkZxVYXP2Eqc9W
+alias mx_usql='usql -k /Users/dan.jones/uptycs_apikey_DanJones.json global'
+
 export MX_DETECTOR_REPO_PATH=/Users/dan.jones/Code/lab/infosec/secops/detectors
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
