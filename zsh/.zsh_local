@@ -1,21 +1,13 @@
-name=`hostname`
-
-export dandevdesktop='dev-dsk-djdan-2c-2080d160.us-west-2.amazon.com'
-export ddd=$dandevdesktop
-export personal_bindle_id="amzn1.bindle.resource.35vyrva4gdrb5nwmhfd2i7y3q"
-
-if [[ $name != "147dda285f97.ant.amazon.com" ]] || [[ $name != "DESKTOP-3JR7AS8" ]] {
-  SPACESHIP_TIME_COLOR="yellow"
+bindgrep()
+{
+  grep -i -rih $1 ~/Code/lab/ops/bind/* | grep -v PTR   | grep --color $1
 }
 
-if [[ $name == "147dda285f97.ant.amazon.com" ]] || [[ $name == "DESKTOP-3JR7AS8" ]] {
-  alias rsync_devdesktop='rsync -aP ~/Code/ "djdan@$ddd:~/code"'
-  alias rddd='rsync_devdesktop'
-  alias sddd='ssh_devdesktop'
-  alias ssh_devdesktop='ssh djdan@'$ddd
+
+policygrep()
+{
+  pdfgrep -in  $1 /Users/dan.jones/Google\ Drive\ File\ Stream/My\ Drive/***Shared/Wiki/MX\ Security/Client-Partner\ Due\ Diligence\ \(under\ NDA\)/*.pdf
 }
 
-alias aauth='kinit -f && mwinit -o'
-
-export PATH="$HOME/.toolbox/bin:$PATH"
-export ENABLE_CUSTOM_TEMPLATES=1
+export GITLAB_API_PRIVATE_TOKEN=-8FrxFxkZxVYXP2Eqc9W
+export MX_DETECTOR_REPO_PATH=/Users/dan.jones/Code/lab/infosec/secops/detectors
