@@ -21,6 +21,7 @@ alias tar_bz='tar -bcvf'
 alias tar_gz='tar -zcvf'
 alias untar_bz='tar -bxvf'
 alias untar_gz='tar -zxvf'
+alias ykey_edit='gpg --card-edit'
 alias ..='cd ..' #Shortcut up a dir
 
 yubikey_ssh_enable () {
