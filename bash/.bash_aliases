@@ -21,8 +21,12 @@ alias tar_bz='tar -bcvf'
 alias tar_gz='tar -zcvf'
 alias untar_bz='tar -bxvf'
 alias untar_gz='tar -zxvf'
-alias ykey_edit='gpg --card-edit'
 alias ..='cd ..' #Shortcut up a dir
+
+#TODO: Need to make this Mac only
+message_me () {
+    osascript -e ‘tell application “Messages” to send “$1” to buddy “8013368100”’ 
+}
 
 yubikey_ssh_enable () {
     ssh-add -l 1> /dev/null 2>/dev/null
