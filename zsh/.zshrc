@@ -124,6 +124,10 @@ if [[ -f ~/.zsh_local ]]; then
   source ~/.zsh_local
 fi
 
+if [[ -f ~/code/set_local_envs.sh ]]; then
+  source ~/code/set_local_envs.sh
+fi
+
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
