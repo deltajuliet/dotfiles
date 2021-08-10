@@ -1,0 +1,21 @@
+name=`hostname`
+
+export dandevdesktop='dev-dsk-djdan-2c-2080d160.us-west-2.amazon.com'
+export ddd=$dandevdesktop
+export personal_bindle_id="amzn1.bindle.resource.35vyrva4gdrb5nwmhfd2i7y3q"
+
+if [[ $name != "147dda285f97.ant.amazon.com" ]] || [[ $name != "DESKTOP-3JR7AS8" ]] {
+  SPACESHIP_TIME_COLOR="yellow"
+}
+
+if [[ $name == "147dda285f97.ant.amazon.com" ]] || [[ $name == "DESKTOP-3JR7AS8" ]] {
+  alias rsync_devdesktop='rsync -aP ~/Code/ "djdan@$ddd:~/code"'
+  alias rddd='rsync_devdesktop'
+  alias sddd='ssh_devdesktop'
+  alias ssh_devdesktop='ssh djdan@'$ddd
+}
+
+alias aauth='kinit -f && mwinit -o'
+
+export PATH="$HOME/.toolbox/bin:$PATH"
+export ENABLE_CUSTOM_TEMPLATES=1
