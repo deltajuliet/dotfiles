@@ -76,9 +76,9 @@ SPACESHIP_USER_COLOR="red"
 
 unamestr=`uname`
 if [[ "$unamestr" == 'Darwin' ]]; then
-  plugins=(alias-finder colored-man-pages cp docker git jsontools kubectl macos rsync tmux urltools vscode web-search zsh-syntax-highlighting)
+  plugins=(alias-finder aws colored-man-pages cp docker git jsontools kubectl macos rsync tmux urltools vscode web-search zsh-syntax-highlighting)
 else
-  plugins=(alias-finder colored-man-pages cp docker git jsontools kubectl rsync tmux urltools vscode web-search zsh-syntax-highlighting)
+  plugins=(alias-finder aws colored-man-pages cp docker git jsontools kubectl rsync tmux urltools vscode web-search zsh-syntax-highlighting)
 fi
 
 #plugins=(
