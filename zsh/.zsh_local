@@ -13,10 +13,37 @@ if [[ $name == "147dda285f97.ant.amazon.com" ]] || [[ $name == "DESKTOP-3JR7AS8"
   alias rsync_devdesktop='rsync -aP ~/Code/ "djdan@$ddd:~/code"'
   alias rddd='rsync_devdesktop'
   alias sddd='ssh_devdesktop'
-  alias ssh_devdesktop='ssh djdan@'$ddd
+  alias tddd='ssh_devdesktop'
+  alias ssh_devdesktop='ssh -L 9095:localhost:9095 -l djdan '$ddd
 }
 
 alias aauth='kinit -f && mwinit -o'
+
+#Aliases that I got from Henoks Wiki (https://w.amazon.com/bin/view/Users/hasfaw/):
+# Apollo
+alias host='sudo /apollo/env/ApolloCommandLine/bin/apolloHostControlCLI --status '
+alias env-on='sudo /apollo/bin/runCommand -a Activate -e '
+alias env-off='sudo /apollo/bin/runCommand -a Deactivate -e '
+ 
+# Brazil
+alias ws-add='brazil ws create --name '
+alias ws-rm='brazil ws delete'
+alias ws-clean='brazil ws clean'
+alias ws-dryrun='brazil ws dryrun'
+alias pkg-add='brazil ws use -b mainline -p '
+alias pkg-rm='brazil ws remove -p '
+alias env-attach='brazil ws env attach --alias '
+alias env-detach='brazil ws env detach --alias '
+alias env-update='brazil ws env update'
+alias vs-sync='brazil ws sync --metaData'
+alias vs='brazil ws use --versionset '
+alias bre='brazil-runtime-exec '
+ 
+# Brazil Build
+alias bb='brazil-build'
+alias bbc='brazil-build clean'
+alias bbs='brazil-build server'
+#End of Henoks aliases
 
 export PATH="$HOME/.toolbox/bin:$PATH"
 export ENABLE_CUSTOM_TEMPLATES=1
