@@ -7,6 +7,12 @@ export personal_bindle_id="amzn1.bindle.resource.35vyrva4gdrb5nwmhfd2i7y3q"
 if [[ $name != "147dda285f97.ant.amazon.com" ]] || [[ $name != "DESKTOP-3JR7AS8" ]] {
   alias daws='aws --profile=djdan'
   SPACESHIP_TIME_COLOR="yellow"
+
+  function grs_start () {
+    tmux new-session -d -s grs_notebook
+    tmux send-keys -t grs_notebook "cd /home/djdan/code/amazon/ATIG-GRS/src/ATIG-GRS/bin" C-m
+    tmux send-keys -t grs_notebook "brazil-runtime-exec sh runJupyter.sh" C-m
+  }
 }
 
 if [[ $name == "147dda285f97.ant.amazon.com" ]] || [[ $name == "DESKTOP-3JR7AS8" ]] {

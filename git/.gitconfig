@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Dan Jones
-	email = 1455270+deltajuliet@users.noreply.github.com
+	email = djdan@amazon.com
 [core]
 	excludesfile = /Users/deltajuliet/.gitignore_global
 [include]
