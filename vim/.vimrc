@@ -1,3 +1,5 @@
+source $VIMRUNTIME/defaults.vim
+
 command Nonum set nonumber norelativenumber
 command Num set number relativenumber
 filetype plugin indent on
